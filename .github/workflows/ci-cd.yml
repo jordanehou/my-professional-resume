@@ -78,8 +78,7 @@ jobs:
           cluster: ${{ vars.ECS_CLUSTER }}
           wait-for-service-stability: true
           wait-for-minutes: 10
-EOFcat >> .github/workflows/ci-cd.yml << 'EOF'
-
+          
       - name: Fill in the new image ID in the Amazon ECS task definition
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
